@@ -1,8 +1,8 @@
 # Code Journal
 
-Are you tired of Wordpress messing up your code upon publishing? Or if your headless CMS runs into an issue, you are locked out of accessing your content until you restore your application.
+Are you tired of Wordpress messing up your code upon publishing? Or if your headless CMS runs into issues, you are locked out of your code journal until you restore service.
 
-This is where Code Journal comes in. Code Journal built using Gatsby. Code Journal lets you publish your blogs as markdown files.
+This is where Code Journal comes in. Code Journal is built using Gatsby, so you can always access your code journal by opening the statically generated site, or open the markdown files directly.
 
 ## Installation
 
