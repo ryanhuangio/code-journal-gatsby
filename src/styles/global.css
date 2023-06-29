@@ -1,3 +1,82 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Red+Hat+Mono:wght@400;700&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  text-align: center;
+  line-height: 2em;
+  @apply dark:bg-slate-900;
+  @apply bg-slate-200;
+}
+
+.content h1 {
+  @apply text-xl font-bold;
+}
+
+.content h2 {
+  @apply text-lg font-bold;
+}
+
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  @apply text-base font-bold;
+}
+
+.content a {
+  @apply text-blue-800 hover:text-blue-600 dark:text-teal-700 dark:hover:text-teal-500 transition-all hover:font-bold;
+}
+
+code {
+  line-height: 1em;
+}
+
+deckgo-highlight-code {
+  --deckgo-highlight-code-font-size: 0.875rem;
+  --deckgo-highlight-code-line-height: 1.25rem;
+  --deckgo-highlight-code-font-family: ui-monospace, SFMono-Regular, Menlo,
+    Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+p code,
+li code {
+  @apply text-sm px-3 py-2 rounded border border-neutral-300 dark:border-teal-700;
+}
+
+p {
+  @apply my-3;
+}
+
+ul,
+ol {
+  @apply my-3;
+}
+
+ul li p,
+ol li p {
+  @apply my-0;
+}
+
+@layer utilities {
+  .list-decimal {
+    list-style-type: decimal;
+  }
+}
+
+@layer components {
+  ol {
+    @apply list-decimal;
+    @apply m-0 p-0; /* Reset margin and padding for the ol element */
+  }
+
+  ol li {
+    @apply ml-4 py-1; /* Adjust margin and padding for list items */
+  }
+}
