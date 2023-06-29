@@ -1,17 +1,17 @@
 # Code Journal
 
-Are you tired of Wordpress messing up your code upon publishing? Or if your headless CMS runs into issues, you are locked out of your code journal until you restore service.
+Are you tired of WordPress messing up your code when you publish it? Or do you find yourself locked out of your code journal until service is restored if your headless CMS encounters issues?
 
-This is where Code Journal comes in. Code Journal is built using Gatsby, so you can always access your code journal by opening the statically generated site, or open the markdown files directly.
+That's where Code Journal comes in. Built using Gatsby, Code Journal allows you to access your code journal at any time by opening the statically generated site or directly accessing the markdown files.
 
-## Installation
+## Provision
 
 1. `git clone https://github.com/ryanhuangio/code-journal-gatsby.git`
 2. `cd code-journal`
 3. `yarn install`
 4. `gatsby develop`
 
-## Adding Content
+## Add Posts
 
 1. Navigate to `./code-journal/src/content/`
 2. Create a new markdown file in this format `YYYY-MM-DD-blog-post.md`. You can name it anything you want, as long as it is in the the content folder and is a .md file.
@@ -27,7 +27,7 @@ date: "2015-02-26"
 Markdown goes here...
 ```
 
-## Deployment
+## Deploy
 
 1. `gatsby build && gatsby serve`
 
