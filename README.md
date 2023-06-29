@@ -1,49 +1,41 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# Code Journal
 
-## 🚀 Quick start
+Are you tired of Wordpress messing up your code upon publishing? Or if your headless CMS runs into an issue, you are locked out of accessing your content until you restore your application.
 
-1.  **Create a Gatsby site.**
+This is where Code Journal comes in. Code Journal built using Gatsby. Code Journal lets you publish your blogs as markdown files.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+## Installation
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+1. `git clone https://github.com/ryanhuangio/code-journal-gatsby.git`
+2. `cd code-journal`
+3. `yarn install`
+4. `gatsby develop`
 
-2.  **Start developing.**
+## Adding Content
 
-    Navigate into your new site’s directory and start it up.
+1. Navigate to `./code-journal/src/content/`
+2. Create a new markdown file in this format `YYYY-MM-DD-blog-post.md`. You can name it anything you want, as long as it is in the the content folder and is a .md file.
+3. Add the "frontmatter" between --- and beneath that is your post.
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+```markdown
+---
+title: "How to Verify a Conversion Tracking Pixel"
+slug: "verify-tracking-pixel"
+date: "2015-02-26"
+---
 
-3.  **Open the code and start customizing!**
+Markdown goes here...
+```
 
-    Your site is now running at http://localhost:8000!
+## Deployment
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+1. `gatsby build && gatsby serve`
 
-4.  **Learn more**
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
-## 🚀 Quick start (Netlify)
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+
+
+
+
