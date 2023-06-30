@@ -16,18 +16,25 @@ body {
 }
 
 .content h1 {
-  @apply text-xl font-bold;
+  @apply text-2xl font-bold  dark:text-neutral-200;
 }
 
 .content h2 {
-  @apply text-lg font-bold;
+  @apply text-xl font-bold  dark:text-neutral-200;
 }
 
-.content h3,
+.content h3 {
+  @apply text-lg font-bold  dark:text-neutral-200;
+}
+
 .content h4,
 .content h5,
 .content h6 {
-  @apply text-base font-bold;
+  @apply text-base font-bold dark:text-neutral-200;
+}
+
+.content {
+  @apply dark:text-neutral-400;
 }
 
 .content a {
@@ -47,7 +54,8 @@ deckgo-highlight-code {
 
 p code,
 li code {
-  @apply text-sm px-3 py-2 rounded border border-neutral-300 dark:border-teal-700;
+  @apply text-sm px-2.5 py-1.5 rounded border border-neutral-300 dark:border-teal-700 dark:text-neutral-200 bg-neutral-100 dark:bg-slate-800;
+  line-height:2rem;
 }
 
 p {

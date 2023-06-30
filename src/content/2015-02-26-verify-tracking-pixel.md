@@ -1,5 +1,5 @@
 ---
-title: "How to Verify a Conversion Tracking Pixel"
+title: "Verifying Conversion Tracking Pixel"
 slug: "verify-tracking-pixel"
 date: "2015-02-26"
 ---

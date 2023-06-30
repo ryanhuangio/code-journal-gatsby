@@ -13,13 +13,20 @@ export default function BlogPost({ data }) {
   };
 
   return (
-    <BaseTemplate pageTitle={post.frontmatter.title}>
-      <div>
-        <h1 className="text-xl font-bold">{post.frontmatter.title}</h1>
-        <span className="content">{renderContent()}</span>
-      </div>
-    </BaseTemplate>
-  );
+		<BaseTemplate pageTitle={post.frontmatter.title}>
+			<div>
+				<h1 className='text-xl font-bold'>{post.frontmatter.title}</h1>
+				<span className='content'>
+					{renderContent()}
+					<p className='text-xs opacity-50 hover:opacity-100 transition-all mt-8 mb-5'>
+						Published on {post.frontmatter.date.substr(5, 2)}-
+						{post.frontmatter.date.substr(8, 2)}-
+						{post.frontmatter.date.substr(0, 4)}
+					</p>
+				</span>
+			</div>
+		</BaseTemplate>
+	)
 }
 
 export const query = graphql`
