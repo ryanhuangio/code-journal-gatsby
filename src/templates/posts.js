@@ -4,13 +4,11 @@ import BaseTemplate from '../templates/base'
 import { sortBy } from 'lodash'
 
 const Posts = ({ posts }) => {
+	const postsPerPage = 4
 	const [searchTerm, setSearchTerm] = useState('')
-	const [visiblePosts, setVisiblePosts] = useState(5)
+	const [visiblePosts, setVisiblePosts] = useState(postsPerPage)
 
-	const sortedPosts = sortBy(
-		posts,
-		(post) => new Date(post.frontmatter.date)
-	).reverse()
+	const sortedPosts = sortBy(posts, (post) => post.frontmatter.date).reverse()
 
 	const truncate = (text, maxLength) => {
 		const strippedText = text.replace(/<[^>]+>/g, '')
@@ -28,7 +26,7 @@ const Posts = ({ posts }) => {
 	}
 
 	const handleSeeMore = () => {
-		setVisiblePosts(visiblePosts + 5)
+		setVisiblePosts(visiblePosts + postsPerPage)
 	}
 
 	const filteredPosts = sortedPosts.filter((post) => {

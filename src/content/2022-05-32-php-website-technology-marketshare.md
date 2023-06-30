@@ -3,6 +3,12 @@ title: "PHP Website Technology Marketshare"
 slug: "php-website-technology-marketshare"
 date: "2022-05-32"
 ---
+
+The script below scans the websites and identifies footprints or signatures of specific software or applications, and gives a breakdown. For my test, I used the top 1 million websites dataset provided by Majesti SEO.
+
+`php webtech.php`
+
+### webtech.php
 ```php
 <?php
 ini_set('default_socket_timeout',5); 

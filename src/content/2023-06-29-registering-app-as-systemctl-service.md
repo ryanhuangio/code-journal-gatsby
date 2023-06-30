@@ -1,13 +1,13 @@
 ---
 title: "Registering Application as a Systemctl Service in Linux"
 slug: "register-app-systemctl-service"
-date: "2023-06-29"
+date: "2023-06-29" 
 ---
 
 In this example, I will use a Gatsby app called Code Journal. Replace the values for your application.
 
 1. Create this file `sudo vi /etc/systemd/system/codejournal.service` (replace `codejournal` with your app)
-2. Add the following but replace `Description` and 
+2. Add the following but replace `Description` `ExecStart` and `WorkingDirectory`
 ```
 [Unit]
 Description=Code Journal
