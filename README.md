@@ -10,7 +10,7 @@ That's where Code Journal comes in. Built using Gatsby, Code Journal allows you 
 
 ![](src/images/code-journal-post.png "Post")
 
-![](src/images/code-journal-post-markdown.png "Post Markdown Source")
+![](src/images/code-journal-markdown.png "Post Markdown Source")
 
 [Github Repo](https://github.com/ryanhuangio/code-journal-gatsby)
 
