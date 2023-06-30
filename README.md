@@ -1,6 +1,6 @@
 # Code Journal
 
-### Convert Markdown Files into a Blog with Beautiful Code Highlighting
+### Convert Markdown Files into a Beautiful Blog with Code Highlighting
 
 Are you tired of WordPress messing up your code when you publish it? Or do you find yourself locked out of your code journal until service is restored if your headless CMS encounters issues?
 
