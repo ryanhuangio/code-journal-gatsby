@@ -31,12 +31,13 @@ That's where Code Journal comes in. Built using Gatsby, Code Journal allows you 
 
 ```markdown
 ---
-title: "How to Verify a Conversion Tracking Pixel"
-slug: "verify-tracking-pixel"
-date: "2015-02-26"
+title: "Code Journal Entry"
+slug: "code-journal-entry"
+date: "2023-06-30"
 ---
 
 Markdown goes here...
+
 ```
 
 ## Deploy
