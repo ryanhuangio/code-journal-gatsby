@@ -4,9 +4,12 @@ Are you tired of WordPress messing up your code when you publish it? Or do you f
 
 That's where Code Journal comes in. Built using Gatsby, Code Journal allows you to access your code journal at any time by opening the statically generated site or directly accessing the markdown files.
 
-![](src/images/code-journal-1.png)
-![](src/images/code-journal-2.png)
-![](src/images/code-journal-3.png)
+![](src/images/code-journal.png "Code Journal Posts")
+
+![](src/images/code-journal-post.png "Syntax Highlighter")
+
+<button name="button" onclick="https://code.ryanhuang.io">Live Demo</button>
+
 
 ## Provision
 
