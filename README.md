@@ -1,12 +1,14 @@
 # Code Journal
 
+### Convert Markdown Files into a Blog with Beautiful Code Highlighting
+
 Are you tired of WordPress messing up your code when you publish it? Or do you find yourself locked out of your code journal until service is restored if your headless CMS encounters issues?
 
 That's where Code Journal comes in. Built using Gatsby, Code Journal allows you to access your code journal at any time by opening the statically generated site or directly accessing the markdown files.
 
-![](src/images/code-journal.png "Code Journal Posts")
+![](src/images/code-journal.png "Code Journal")
 
-![](src/images/code-journal-post.png "Syntax Highlighter")
+![](src/images/code-journal-post.png "Code Journal Post")
 
 [Github Repo](https://github.com/ryanhuangio/code-journal-gatsby)
 
