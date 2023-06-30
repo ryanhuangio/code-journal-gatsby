@@ -29,17 +29,20 @@ On the slave MariaDB servers, import each SQL dump and restart the slave.
 
 Enter `mariadb`
 
-```STOP SLAVE;
+```
+STOP SLAVE;
 RESET SLAVE;
 CHANGE MASTER TO MASTER_LOG_FILE='mysql-bin.000001', MASTER_LOG_POS=1;
 START SLAVE;
-show slave status G```
+show slave status G
+```
 
 ## Re-Sync to Current Master Position
 
 If there are any errors on the slaves, you can resync the slaves to the current position of the master, which you can find both the `MASTER_LOG_FILE` and `MASTER_LOG_POS` from phpMyAdmin.
 
-```STOP SLAVE;
+```
+STOP SLAVE;
 RESET SLAVE;
 CHANGE MASTER TO
   MASTER_HOST='master.db.prdistribution.com', 
@@ -50,16 +53,19 @@ CHANGE MASTER TO
   MASTER_LOG_POS=108314,
   MASTER_CONNECT_RETRY=10;
 START SLAVE;
-show slave status G```
+show slave status G
+```
 
-![](https://ryanhuang.io/wp-content/uploads/2022/01/Screen-Shot-2022-01-04-at-8.33.10-PM-1024x672.png)
+![](/2022-01-05-rebuild-resync-mariadb-replication.png)
 
 Grant Privileges
 ----------------
 
 If there are permissions that need to be set, you can do so with the following as examples (change empty password fields after `IDENTIFIED BY`):
 
-```GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '' WITH GRANT OPTION;
+```
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '' WITH GRANT OPTION;
 GRANT ALL PRIVILEGES ON *.* TO 'replication_user'@'%' IDENTIFIED BY '' WITH GRANT OPTION;
 GRANT ALL PRIVILEGES ON *.* TO 'replication_root'@'%' IDENTIFIED BY '' WITH GRANT OPTION;
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY '' WITH GRANT OPTION;```
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY '' WITH GRANT OPTION;
+```

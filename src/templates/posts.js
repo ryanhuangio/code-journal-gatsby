@@ -4,7 +4,7 @@ import BaseTemplate from '../templates/base'
 import { sortBy } from 'lodash'
 
 const Posts = ({ posts }) => {
-	const postsPerPage = 4
+	const postsPerPage = 8
 	const [searchTerm, setSearchTerm] = useState('')
 	const [visiblePosts, setVisiblePosts] = useState(postsPerPage)
 

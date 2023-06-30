@@ -18,9 +18,9 @@ If you need to remove all of the duplicate entries, here is the SQL query to do 
 
 ```
 DELETE FROM tablename 
-WHERE id IN (SELECT \* 
+WHERE id IN (SELECT * 
 FROM (SELECT id FROM tablename 
-    GROUP BY col1, col2, col3 HAVING (COUNT(\*) > 1)
+    GROUP BY col1, col2, col3 HAVING (COUNT(*) > 1)
     ) AS A
 );
 ```
@@ -30,13 +30,13 @@ Simply replace the table name and column IDs.
 And, if you need to do a bulk find and replace, here is the SQL query:
 
 ```
-UPDATE us\_emails SET col1 = REPLACE(col1,'find\_this','replace\_with\_this');
+UPDATE us_emails SET col1 = REPLACE(col1,'find_this','replace_with_this');
 ```
 
 Lastly, if you need to export the MySQL database tables as CSV files, you can do so in phpMyAdmin but for really large files it may time out. In this case, you would need to use SSH and use the following command:
 
 ```
-mysql -u root -ppassword database\_name -e "SELECT \* INTO OUTFILE '/full\_server\_path/filename.csv'  FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '\\"'  LINES TERMINATED BY '\\r\\n' FROM table\_name;"
+mysql -u root -ppassword database_name -e "SELECT \* INTO OUTFILE '/full_server_path/filename.csv'  FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '\"'  LINES TERMINATED BY '\r\n' FROM table_name;"
 ```
 
 Simply replace the root username, password, database name, output file full path and file name, and table name.

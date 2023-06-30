@@ -8,7 +8,8 @@ This assumes the MariaDB replicas are already exist.
 
 Replace `/etc/haproxy/haproxy.cfg` with
 
-```global
+```
+global
     log 127.0.0.1 local0 notice
     user haproxy
     group haproxy
@@ -35,12 +36,15 @@ listen stats
     stats enable
     stats uri /
     stats realm Strictly Private
-    stats auth admin:password```
+    stats auth admin:password
+```
 
-Install MariaDB so HAProxy can check each replica.
+### Install MariaDB so HAProxy can check each replica.
 
 On the MariaDB replication master, enter mariadb and run (replace `10.0.0.x` with IP of HAProxy instance)
 
-```GRANT ALL PRIVILEGES ON _._ TO 'haproxy_user'@'10.0.0.x' IDENTIFIED BY 'AnyPassword' WITH GRANT OPTION; 
+```
+GRANT ALL PRIVILEGES ON _._ TO 'haproxy_user'@'10.0.0.x' IDENTIFIED BY 'AnyPassword' WITH GRANT OPTION; 
 SET PASSWORD FOR 'haproxy_user'@'10.0.0.x'='';
-FLUSH PRIVILEGES;```
+FLUSH PRIVILEGES;
+```

@@ -10,18 +10,22 @@ Rocky Linux 8 was used, but this works for all RHEL downstream distros, such as 
 
 Add the following to `/etc/my.cnf`
 
-```[client-server]
+```
+[client-server]
 [mariadb]
 log-bin
 server_id=1
 log-basename=master1
-binlog-format=mixed```
+binlog-format=mixed
+```
 
 Enter `mariadb` and run
 
-```GRANT ALL PRIVILEGES ON _._ TO 'replication_user'@'%' IDENTIFIED BY '' WITH GRANT OPTION;
+```
+GRANT ALL PRIVILEGES ON _._ TO 'replication_user'@'%' IDENTIFIED BY '' WITH GRANT OPTION;
 GRANT REPLICATION SLAVE ON *.* TO 'replication_user'@'%';
-FLUSH PRIVILEGES;```
+FLUSH PRIVILEGES;
+```
 
 ## Replicas
 
@@ -29,9 +33,11 @@ FLUSH PRIVILEGES;```
 
 Add the following to `/etc/my.cnf`
 
-```[mariadb]
+```
+[mariadb]
 server_id=[unique int]
-#server_id=2```
+#server_id=2
+```
 
 Restart MariaDB
 
@@ -39,7 +45,8 @@ Restart MariaDB
 
 Enter `mariadb` and run
 
-```CHANGE MASTER TO
+```
+CHANGE MASTER TO
   MASTER_HOST='master.db.prdistribution.com', 
   MASTER_USER='replication_user',
   MASTER_PASSWORD='PASSWORD',
@@ -50,4 +57,5 @@ Enter `mariadb` and run
 
 Allow remote connections (optional) but change '%' to remote IP.
 
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;```
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;
+```

@@ -7,4 +7,4 @@ PowerToys is an app available from the Microsoft Store for free by Microsoft. Th
 
 The key mapping below helps MacOS users using Windows keep their existing keyboard preferences with Command acting as Ctrl (Control) and gives convenient access to the Windows key.
 
-![](https://ryanhuang.io/wp-content/uploads/2022/06/Screen-Shot-2022-06-02-at-11.12.22-PM-1024x749.png)
+![](/2022-06-03-remap-keys-windows.png)

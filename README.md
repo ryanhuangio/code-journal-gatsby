@@ -40,6 +40,8 @@ Markdown goes here...
 
 ```
 
+4. Set how many posts per page you want to display through `const postsPerPage` in `./code-journal/src/templates/posts.js` 
+
 ## Deploy
 
 1. `gatsby build && gatsby serve`
