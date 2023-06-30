@@ -9,6 +9,7 @@ That's where Code Journal comes in. Built using Gatsby, Code Journal allows you 
 ![](src/images/code-journal-post.png "Syntax Highlighter")
 
 [Github Repo](https://github.com/ryanhuangio/code-journal-gatsby)
+
 [Live Demo](https://code.ryanhuang.io)
 
 ## Provision
