@@ -1,0 +1,22 @@
+---
+title: Automatic Daily Backups from Ubuntu Server to Google Drive
+slug: "automatic-backups-ubuntu-to-google-drive"
+date: "2023-07-03"
+---
+
+This requires `rclone` installed and configured to Google Drive. See [Rclone Ubuntu Server to Google Drive](/rclone-ubuntu-server-to-google-drive)
+
+1. Create the script `vi backups.sh`
+```bash
+#!/bin/bash
+
+rm -rf /root/temp/*
+
+current_date=$(date +%Y-%m-%d)
+
+find /root -mindepth 1 -maxdepth 1 -type d -not -path '*/node_modules/*' -not -name '.*' -exec sh -c 'zip -r "/root/temp/$(basename {}).zip" "{}" -x "/root/temp"' \;
+
+rclone copy /root/temp/* GoogleDrive:RcloneBackups/node.ryanhuang.io/$current_date
+```
+2. Run `crontab -e` and select your favorite text editor
+3. Add `0 23 * * * sh /root/backup.sh` to run automatic backups at 11pm each night
