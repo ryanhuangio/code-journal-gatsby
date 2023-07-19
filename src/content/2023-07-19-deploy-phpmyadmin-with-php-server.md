@@ -22,5 +22,5 @@ $cfg['Servers'][$i]['AllowNoPassword'] = true;
 6. Save it and run. The configurations will allow for importing larger SQL files.
 
 ```
-php -d memory_limit=1024M -d post_max_size=500M -d upload_max_size=500M -S localhost:8080
+php -d memory_limit=1024M -d post_max_size=500M -d upload_max_filesize=500M -S localhost:8080
 ```
