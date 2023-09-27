@@ -60,4 +60,16 @@ volumes:
 
 ```
 
-2. Run `docker compose up -d`
+2. Save as `Dockerfile.phpmyadmin`
+
+```
+FROM phpmyadmin/phpmyadmin
+
+# Increase PHP upload limits
+RUN echo "memory_limit = 512M" >> /usr/local/etc/php/conf.d/upload-limits.ini && \
+    echo "post_max_size = 512M" >> /usr/local/etc/php/conf.d/upload-limits.ini && \
+    echo "upload_max_filesize = 512M" >> /usr/local/etc/php/conf.d/upload-limits.ini
+
+```
+
+3. Run `docker compose up -d`
